@@ -1,0 +1,18 @@
+name: Tests
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    uses: tingerrr/hydra/.github/workflows/setup.yml@master
+  tests:
+    needs: setup
+    steps:
+      - name: Run tests
+        run: |
+          just gen
+          just test
