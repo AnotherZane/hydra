@@ -6,10 +6,12 @@ on:
     branches: [ master ]
 
 jobs:
-  tests:
+  setup:
     runs-on: ubuntu-latest
+    uses: tingerrr/hydra/.github/workflows/setup.yml@master
+  tests:
+    needs: setup
     steps:
-      - uses: tingerrr/hydra/.github/workflows/setup.yml@master
       - name: Run tests
         run: |
           just gen
