@@ -7,9 +7,9 @@ on:
 
 jobs:
   setup:
-    runs-on: ubuntu-latest
     uses: AnotherZane/hydra/.github/workflows/setup.yml@master
   tests:
+    runs-on: ubuntu-latest
     needs: setup
     steps:
       - name: Run tests
