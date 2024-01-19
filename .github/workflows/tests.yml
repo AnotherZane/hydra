@@ -8,7 +8,7 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
-    uses: tingerrr/hydra/.github/workflows/setup.yml@master
+    uses: AnotherZane/hydra/.github/workflows/setup.yml@master
   tests:
     needs: setup
     steps:
