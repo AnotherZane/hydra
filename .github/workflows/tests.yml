@@ -9,7 +9,7 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: AnotherZane/hydra
+      - uses: AnotherZane/hydra@master
       - name: Run tests
         run: |
           just gen
